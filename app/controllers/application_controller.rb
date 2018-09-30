@@ -13,7 +13,7 @@ class App < Sinatra::Base
       @members = @params[:team][:member].map do |member|
         new_member = Member.new(member[:name], member[:power], member[:bio])
       end
-    binding.pry
+  
 
       erb :'../views/team'
     end
